@@ -1,0 +1,26 @@
+---
+import "@fontsource-variable/alexandria";
+import "@fontsource-variable/fira-code";
+import "@fontsource-variable/kufam";
+import { ThemeModeScript } from "flowbite-react";
+import Nav from "../components/Nav";
+import Foot from "../components/Footer";
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/spiderweb.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+     <ThemeModeScript />
+    <title>Hoda Salim</title>
+  </head>
+  <body class="font-light bg-rose-50 dark:bg-violet-900  dark:text-white text-black">
+    <Nav  client:load />
+    <slot />
+    <Foot client:load />
+    <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  </body>
+</html>
